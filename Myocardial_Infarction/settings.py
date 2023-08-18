@@ -27,6 +27,7 @@ SECRET_KEY = "django-insecure-=k)h=1jxms7n#6ab**t@&6e(drz_xqw*&*=81q_p8#(!ii1vya
 DEBUG = True
 
 ALLOWED_HOSTS = [
+    "*",
     "myocardial-infarction-bae0828dfd3d.herokuapp.com"
 ]
  
