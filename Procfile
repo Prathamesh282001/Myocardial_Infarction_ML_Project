@@ -1,0 +1,1 @@
+web: gunicorn Myocardial_Infarction.wsgi

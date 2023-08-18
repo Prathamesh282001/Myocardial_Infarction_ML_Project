@@ -1,0 +1,154 @@
+{% load static %} 
+<html>
+<head>
+ 
+    <!-- Required meta tags>-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'main.css' %}">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+    <script type="text/javascript">
+        window.history.forward();
+        function noBack() {
+            window.history.forward();
+        }
+    </script>
+
+</head>
+<body>
+
+    <section class="head-bar">
+        <img class = "sign" src="media/sign.png"/>
+        <nav>
+            <ul>
+                <h1 class = "nav1"><b>Myocardial Infarction</b></h1>
+                <!--<li class="nav1"><h1 class = "nav1"><a href = "{% url 'home-page' %}"><b>Myocardial Infarction</b></a></h1></li>&nbsp;  -->
+            </ul>
+        </nav>
+    </section>
+    <section>
+        <img class = "heart" src="media/heart.jpg.avif"/> 
+    </section>
+
+    <section class="info">
+        <p1><b>Myocardial infarction (MI), colloquially known as "heart attack". A heart attack usually occurs when a blood clot blocks blood flow to the heart. Without blood, tissue loses oxygen and dies.
+        Symptoms include tightness or pain in the chest, neck, back or arms, as well as fatigue, lightheadedness, abnormal heartbeat and anxiety.</b> </p1>
+
+        <p1><b>MI is one of the most challenging problems of modern medicine. Acute myocardial infarction is associated with high mortality in the first year after it. The incidence of MI remains high in all countries. This is especially true for the urban population of highly developed countries, which is exposed to chronic stress factors, irregular and not always balanced nutrition. In the United States, for example, more than a million people suffer from MI every year, and 200-300 thousand of them die from acute MI before arriving at the hospital. 
+        The course of the disease in patients with MI is different. MI can occur without complications or with complications that do not worsen the long-term prognosis. At the same time, about half of patients in the acute and subacute periods have complications that lead to worsening of the disease and even death. Even an experienced specialist can not always foresee the development of these complications. In this regard, predicting complications of myocardial infarction in order to timely carry out the necessary preventive measures is an important task.</b> 
+        </p1>
+        <br>
+        <br>
+        <p1 class="level"><b>
+        Lethal outcome : Complication level
+        <li>0: unknown (alive)</li>
+        <li>1: cardiogenic shock</li>
+        <li>2: pulmonary edema</li>
+        <li>3: myocardial rupture</li>
+        <li>4: progress of congestive heart failure</li>
+        <li>5: thromboembolism</li>
+        <li>6: asystole</li>
+        <li>7: ventricular fibrillation</li></b>
+        </p1>
+        <br>
+        <br>
+
+        <div class="form-div">
+            <h2 style="color: red"><b>Classifying complication level of <br>Myocardial Infarction</b></h2>
+            <br>
+             <form class="form-in" method="post" enctype="multipart/form-data" action="predict">
+                 {% csrf_token %}
+                
+                        <div class="input-container">
+                            <input type="number" name="AGE" value={{dic.AGE}} onkeypress="return /[0-9]/i.test(event.key)" step="any" required=""/>
+                            <label>AGE</label>        
+                        </div>
+
+                        <div class="input-container">       
+                            <input type="number" name="STENOK_AN" value={{dic.STENOK_AN}} onkeypress="return /[0-9]/i.test(event.key)" step="any" required=""/>
+                            <label>STENOK_AN</label>
+                        </div>
+
+                        <div class="input-container">       
+                            <input type="number"  name="ZSN_AN" value={{dic.ZSN_AN}}  onkeypress="return /[0-9]/i.test(event.key)" step="any" required=""/>
+                            <label>ZSN_AN</label>
+                        </div>
+
+                        <div class="input-container">       
+                            <input type="number" name="S_AD_ORIT" value={{dic.S_AD_ORIT}}  onkeypress="return /[0-9]/i.test(event.key)" step="any" required=""/>
+                            <label>S_AD_ORIT</label>
+                        </div>
+
+                        <div class="input-container">       
+                            <input type="number"  name="D_AD_ORIT" value={{dic.D_AD_ORIT}}  onkeypress="return /[0-9]/i.test(event.key)" step="any" required=""/>
+                            <label>D_AD_ORIT </label>
+                        </div>
+
+                        <div class="input-container">       
+                            <input type="number" name="K_SH_POST" value={{dic.K_SH_POST}}  onkeypress="return /[0-9]/i.test(event.key)" step="any" required=""/>
+                            <label>K_SH_POST</label>
+                        </div>
+
+                        <div class="input-container">       
+                            <input type="number"  name="ant_im" value={{dic.ant_im}}  onkeypress="return /[0-9]/i.test(event.key)" step="any" required=""/>
+                            <label>ant_im</label>
+                        </div>
+
+                        <div class="input-container">       
+                            <input type="number"  name="ROE" value={{dic.ROE}}  onkeypress="return /[0-9]/i.test(event.key)" step="any" required=""/>
+                            <label>ROE</label>
+                        </div>
+
+                        <div class="input-container">       
+                            <input type="number"  name="FIBR_JELUD" value={{dic.FIBR_JELUD}}  onkeypress="return /[0-9]/i.test(event.key)" step="any" required=""/>
+                            <label>FIBR_JELUD</label>
+                        </div>
+
+                        <div class="input-container">       
+                            <input type="number"  name="RAZRIV" value={{dic.RAZRIV}}  onkeypress="return /[0-9]/i.test(event.key)" step="any" required=""/>
+                            <label>RAZRIV</label>
+                        </div>
+
+                        <button type="submit" class="btn">Run</button>
+            </form>
+            <a class="btn-reset" href="{% url 'home-page' %}">Reset</a>
+        </div>
+        <!--<div class="btn1">
+            <button class="btn11"><a href = "">Go to</a></button>
+        </div>-->
+                        
+    </section>
+
+
+            <div class="op">
+            {% if output == 0 %}
+                <h1><b>{{output}}</b> : Unknown</h1>
+            {% elif output == 1 %}
+                <h1><b>{{output}}</b> : Cardiogenic shock</h1>
+            {% elif output == 2 %}
+                <h1><b>{{output}}</b> : Pulmonary edema</h1>
+            {% elif output == 3 %}
+                <h1><b>{{output}}</b> : Myocardial rupture</h1>
+            {% elif output == 4 %}
+                <h1>{<b>{output}}</b> : Progress of congestive heart failure</h1>
+            {% elif output == 5 %}
+                <h1><b>{{output}}</b> : Thromboembolism</h1>
+            {% elif output == 6 %}
+                <h1><b>{{output}}</b> : Asystole</h1>
+            {% elif output == 7 %}
+                <h1><b>{{output}}</b> : Ventricular fibrillation</h1>
+            {% else%}
+                <h1 style="color: black;margin-right: 90px;"><b>Waiting for input....</b></h1>
+            {% endif %}
+        </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
