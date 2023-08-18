@@ -26,9 +26,10 @@ SECRET_KEY = "django-insecure-=k)h=1jxms7n#6ab**t@&6e(drz_xqw*&*=81q_p8#(!ii1vya
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "myocardial-infarction.herokuapp.com"
+]
  
-
 # Application definition
 
 INSTALLED_APPS = [
