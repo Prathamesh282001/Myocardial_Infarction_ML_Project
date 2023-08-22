@@ -3,7 +3,7 @@ import pandas as pd
 import joblib
 import xgboost
 
-model = joblib.load('./model/model.pkl')
+model = joblib.load('./model/xgboostmodel1.pkl')
 # Create your views here.
 def home(request):
 	return render(request,'home.html')
