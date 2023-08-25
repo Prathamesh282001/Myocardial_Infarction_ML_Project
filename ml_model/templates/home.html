@@ -124,7 +124,7 @@
                         
     </section>
 
-
+        {% if status %}
             <div class="op">
             {% if output == 0 %}
                 <h1><b>{{output}}</b> : Unknown</h1>
@@ -146,6 +146,47 @@
                 <h1 style="color: black;margin-right: 90px;"><b>Waiting for input....</b></h1>
             {% endif %}
         </div>
+        <div>
+            <table style="width: 50%;float: right;margin-top: -150px;margin-right: 20px;">
+                <tr>
+                  <td>AGE</td>
+                  <td>STENOK_AN</td> 
+                  <td>ZSN_AN</td>
+                  <td>S_AD_ORIT</td>
+                  <td>D_AD_ORIT</td>
+                  <td>K_SH_POST</td>
+                  <td>ant_im</td>
+                  <td>ROE</td>
+                  <td>FIBR_JELUD</td>
+                  <td>RAZRIV</td>
+                </tr>
+                <tr style="height: 5vh;">
+                  <td>{{temp.AGE}}</td>
+                  <td>{{temp.STENOK_AN}}</td> 
+                  <td>{{temp.ZSN_AN}}</td>
+                  <td>{{temp.S_AD_ORIT}}</td>
+                  <td>{{temp.D_AD_ORIT}}</td>
+                  <td>{{temp.K_SH_POST}}</td>
+                  <td>{{temp.ant_im}}</td>
+                  <td>{{temp.ROE}}</td>
+                  <td>{{temp.FIBR_JELUD}}</td>
+                  <td>{{temp.RAZRIV}}</td>
+                </tr>
+              </table>
+        </div>
+        <style>
+            table, th, td {
+              border:2px solid black;
+              
+            }
+            </style>
+        
+        {% else %}
+        <div class="op">
+                <h1 style="color: black;margin-right: 90px;"><b>Waiting for input....</b></h1>
+        </div>
+        {% endif %}
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

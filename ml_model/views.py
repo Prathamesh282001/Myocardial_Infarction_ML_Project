@@ -9,6 +9,7 @@ def home(request):
 	return render(request,'home.html')
 
 def predict(request):
+	status = False
 	print(request)
 	if request.method == 'POST':
 		dic={}
@@ -22,13 +23,13 @@ def predict(request):
 		dic['ROE']=request.POST.get('ROE')
 		dic['FIBR_JELUD']=request.POST.get('FIBR_JELUD')
 		dic['RAZRIV']=request.POST.get('RAZRIV')
-
+		status = True
 		temp = dic.copy()
 		print(dic.keys(),dic.values())
 
 	df=pd.DataFrame({'input':dic}).transpose().astype("float")
 	output = model.predict(df)[0]
-	context = {'output':output}
+	context = {'output':output,"temp":temp,"status":status}
 	return render(request,'home.html',context)
 
  
