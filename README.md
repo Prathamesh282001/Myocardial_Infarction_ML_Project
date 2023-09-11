@@ -11,25 +11,24 @@ Lethal outcome : Complication level -->
 4: progress of congestive heart failure
 5: thromboembolism
 6: asystole
-7: ventricular fibrillation
-
-## Steps Performed 
-Data importing --> Data Preprocessing --> Feature Selection --> Models Building and Models Evaluation --> Model Selection --> Create User Interface 
+7: ventricular fibrillation 
 
 ## Libraries & Tools used
 
 1. Python
-2. Numpy and Pandas for data cleaning
-3. Matplotlib and Seaborn for data visualization
+2. Numpy & Pandas for data cleaning
+3. Matplotlib & Seaborn for data visualization
 4. Sklearn for model building
-5. Jupyter notebook and visual studio code as IDE
+5. Jupyter notebook & Visual Studio Code as IDE
 6. Python Django for backend
 7. HTML & CSS for user interface
+
+## User Interface
 
 <img width="1439" alt="Screenshot 2023-09-11 at 1 16 09 PM" src="https://github.com/Prathamesh282001/Myocardial_Infarction_ML_Model_Django/assets/122107260/a1cc3b6c-6883-407e-a92e-2480fb222e0a">
 <img width="1440" alt="Screenshot 2023-09-11 at 1 17 09 PM" src="https://github.com/Prathamesh282001/Myocardial_Infarction_ML_Model_Django/assets/122107260/fc6b85da-1cee-477e-a828-a55f04858084">
 <img width="1440" alt="Screenshot 2023-09-11 at 1 21 31 PM" src="https://github.com/Prathamesh282001/Myocardial_Infarction_ML_Model_Django/assets/122107260/a15a7922-5184-41c7-ba41-670e7470dcb7">
 
-### | Achieve Acuracy of 98% using XGBOOST Classifier.
+### | We have achieved accuracy of 98% using XGBOOST Classifier.
 
 
